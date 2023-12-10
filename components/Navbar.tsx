@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ModeToggle } from "./ui/toggle-mode"
 
 const links = [
   {
@@ -50,6 +51,7 @@ const Navbar = () => {
       
       </div>
       <Link href='/'>🛒</Link>
+      <ModeToggle />
     </div>
   )
 }
