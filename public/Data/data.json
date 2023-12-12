@@ -13,38 +13,37 @@
   },
   {
     "id":2,
-    "title":"Nike Windrunner",
-    "img":"/ProductFour/939da2cf-40ac-4963-ae88-a9098fd32929.jpg",
-    "img1":"/ProductFour/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp",
-    "img2":"/ProductFour/windrunner-herren-laufjacke-k4q9TV (1).jpeg",
-    "category":"Men",
-    "price":200,
-    "alt-price":230,
-    "description":"Design: The jacket is known for its distinctive chevron design, often with contrasting colors. The chevron shape usually runs across the chest and back, creating a dynamic and sporty look. Material: Nike Windrunner jackets are typically made from lightweight and durable materials, making them suitable for various weather conditions. The materials used often include polyester or a blend of synthetic fabrics for breathability and comfort.Hood: Many Windrunner jackets come with a hood, adding versatility and protection against the elements. The hood is often adjustable to provide a customized fit."  
+    "title":"Nike Air Force 1",
+    "img":"/ProductThree/0453f3b6-c33b-44a6-bd68-3732ac2b8bf2.jpg",
+    "img1":"/ProductThree/72a3b44a-3e4c-44b7-b614-835b9d28bcc9.webp",
+    "img2":"/ProductThree/3811255b-206e-4fd2-9477-1739c97ecc80.webp",
+    "category":"Teens",
+    "price":85,
+    "alt-price":105,
+    "description":"Air Cushioning: The Air Force 1 was the first basketball shoe to feature Nike's innovative Air cushioning technology. The midsole contains a cushioned air unit, providing impact protection and comfort.Design: The shoe features a clean and simple design, often with a leather upper and a chunky rubber sole. Its timeless silhouette and versatility have contributed to its enduring popularity.Variety: Over the years, Nike has released numerous iterations of the Air Force 1, including different colorways, materials, and collaborations with artists, designers, and celebrities. The shoe is available in low, mid, and high-top versions."  
 
   },
   {
     "id":3,
-    "title":"Nike Windrunner",
-    "img":"/ProductFour/939da2cf-40ac-4963-ae88-a9098fd32929.jpg",
-    "img1":"/ProductFour/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp",
-    "img2":"/ProductFour/windrunner-herren-laufjacke-k4q9TV (1).jpeg",
-    "category":"Men",
-    "price":200,
-    "alt-price":230,
-    "description":"Design: The jacket is known for its distinctive chevron design, often with contrasting colors. The chevron shape usually runs across the chest and back, creating a dynamic and sporty look. Material: Nike Windrunner jackets are typically made from lightweight and durable materials, making them suitable for various weather conditions. The materials used often include polyester or a blend of synthetic fabrics for breathability and comfort.Hood: Many Windrunner jackets come with a hood, adding versatility and protection against the elements. The hood is often adjustable to provide a customized fit."  
+    "title":"Nike Sportswear Phoenix Fleece",
+    "img":"/ProductTwo/795c66fd-1efc-4fb3-95c8-455ae2d390e9.png",
+    "img1":"/ProductTwo/795c66fd-1efc-4fb3-95c8-455ae2d390e9.webp",
+    "category":"Women",
+    "price":40,
+    "alt-price":55,
+    "description":"Women's sweatshirt with a semi-circular neckline and an additionally enlarged cut.Discover our new luxury loungewear that delivers style, comfort and versatility. Our roomiest cut combined with large details (like a large pocket and a higher waistband) give this sweatshirt unique style. The only thing left to do is decide whether you want to wear it with matching shorts or with other items from your wardrobe.Extended cuff.Embroidered Swoosh logo.80% cotton, 20% polyester.    Machine washable.Imported product.Color Shown: Sail/Black Style: DQ5761-133"  
 
   },
   {
     "id":4,
-    "title":"Nike Windrunner",
-    "img":"/ProductFour/939da2cf-40ac-4963-ae88-a9098fd32929.jpg",
-    "img1":"/ProductFour/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp",
-    "img2":"/ProductFour/windrunner-herren-laufjacke-k4q9TV (1).jpeg",
+    "title":"Nike Air VaporMax 2023 Flyknit",
+    "img":"/ProductOne/air-vapormax-2023-flyknit-herrenschuh-xgCQsr.jpeg",
+    "img1":"/ProductOne/600e6348-ab0e-4de4-9936-60a98594254f.webp",
+    "img2":"/ProductOne/air-vapormax-2023-flyknit-herrenschuh-xgCQsr.webp",
     "category":"Men",
     "price":200,
     "alt-price":230,
-    "description":"Design: The jacket is known for its distinctive chevron design, often with contrasting colors. The chevron shape usually runs across the chest and back, creating a dynamic and sporty look. Material: Nike Windrunner jackets are typically made from lightweight and durable materials, making them suitable for various weather conditions. The materials used often include polyester or a blend of synthetic fabrics for breathability and comfort.Hood: Many Windrunner jackets come with a hood, adding versatility and protection against the elements. The hood is often adjustable to provide a customized fit."  
+    "description":"Nike Air VaporMax 2023 Flyknit: The Air Force 1 was the first basketball shoe to feature Nike's innovative Air cushioning technology. The midsole contains a cushioned air unit, providing impact protection and comfort.Design: The shoe features a clean and simple design, often with a leather upper and a chunky rubber sole. Its timeless silhouette and versatility have contributed to its enduring popularity.Variety: Over the years, Nike has released numerous iterations of the Air Force 1, including different colorways, materials, and collaborations with artists, designers, and celebrities. The shoe is available in low, mid, and high-top versions.."  
 
   }
 ]

@@ -2,7 +2,7 @@ import React from 'react'
 import data from '../public/Data/data.json'
 import Image from 'next/image'
 const Newest = () => {
-  console.log(data)
+  // console.log(data)
 
   return (
     <div className='flex flex-wrap justify-evenly mt-12'>
@@ -18,7 +18,7 @@ const Newest = () => {
               
             />
             <p>{el.title}</p>
-            <p>{el.price} $</p>
+            <p className='font-bold'>{el.price} $</p>
             <p>{el.category}</p>
           </div>
         )
