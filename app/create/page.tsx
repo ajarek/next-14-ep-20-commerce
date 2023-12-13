@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <form
       action={create}
-      className='p-24 max-sm:px-2 max-sm:py-4 flex flex-col justify-evenly gap-4'
+      className='px-24 py-4 max-sm:px-2 max-sm:py-4 flex flex-col justify-evenly gap-4'
     >
       <Label htmlFor='title'>Title</Label>
       <Input

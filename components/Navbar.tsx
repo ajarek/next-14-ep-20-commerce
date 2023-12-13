@@ -26,6 +26,11 @@ const links = [
     title: 'Teens',
     url: '/teens',
   },
+  {
+    id: 5,
+    title: 'Create',
+    url: '/create',
+  },
 ]
 
 const Navbar = () => {

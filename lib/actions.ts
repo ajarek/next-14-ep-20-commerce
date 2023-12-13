@@ -7,7 +7,6 @@ import { redirect } from 'next/navigation'
 
 export async function create(formData: FormData) {
   const userSchema = z.object({
-    _id: z.string(),
     title: z.string(),
     img: z.string(),
     img1: z.string(),
@@ -26,16 +25,18 @@ export async function create(formData: FormData) {
     altprice: formData.get('altprice'),
     description: formData.get('description'),
   })
+  console.log(productData);
   if (!productData) {
     return { message: 'Form data is not valid' }
   }
   try {
     await dbConnect()
     const product = new ProductModel(productData)
-
+    
+    
     await product.save()
     revalidatePath('/')
-    return { message: `Created product ${productData.name}` }
+    return { message: `Created product ${productData.title}` }
   } catch {
     return { message: 'Failed to create product' }
   } finally {

@@ -1,17 +1,21 @@
 import React from 'react'
-import data from '../public/Data/data.json'
 import Image from 'next/image'
 import Link from 'next/link'
-const Newest = () => {
-  // console.log(data)
+import dbConnect from '@/lib/db-connect'
+import ProductModel, { Product } from '@/lib/product-model'
+const Newest = async () => {
+  await dbConnect()
+  const products = (await ProductModel.find({}).sort({
+    _id: -1,
+  })) as Product[]
 
   return (
     <div className='flex flex-wrap justify-evenly mt-12'>
-      {data.map((el) => {
+      {products.map((el) => {
         return (
         
-          <div key={el.id} className='shadow-lg rounded-lg overflow-hidden'>
-            <Link href={`/newestid/${el.id}`}>
+          <div key={el._id} className='shadow-lg rounded-lg overflow-hidden'>
+            <Link href={`/newestid/${el._id}`}>
             <Image
               src={el.img}
               alt='foto'
@@ -21,7 +25,7 @@ const Newest = () => {
             />
             <p>{el.title}</p>
             <p className='font-bold'>{el.price} $</p>
-            <p>{el.category}</p>
+            <p>Men/Women/Teens</p>
             </Link>
           </div>
         )

@@ -1,14 +1,12 @@
-'use client'
-
-import { useParams } from 'next/navigation'
-import data from '../../../public/Data/data.json'
+import dbConnect from '@/lib/db-connect'
+import ProductModel, { Product } from '@/lib/product-model'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const NewestId = () => {
-  const params = useParams()
-  const id =Number(params.id)
-  const newestElement=data.find(el=>el.id===id)
+const NewestId = async ({ params }: { params: { id: string } }) => {
+  await dbConnect()
+  const { id } = params;  
+  const newestElement=await ProductModel.findById(id)
   return (
     <div className='grid grid-cols-2 px-24 py-12 place-items-center'>
       <div className='grid grid-cols-2 place-items-center'>
@@ -47,7 +45,7 @@ const NewestId = () => {
         </div>
       </div>
       <div className='flex flex-col justify-center px-8 gap-4'>
-      <p>{newestElement?.category} </p>
+     
       <p className=' text-xl'>{newestElement?.title} </p>
       <div className='flex items-center'>
       <p className='font-bold text-xl'>{newestElement?.price} $</p>
