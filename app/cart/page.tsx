@@ -1,6 +1,8 @@
-import React from 'react'
+import ProductModel,{CartModel} from '../../lib/product-model'
+import dbConnect from '../../lib/db-connect'
 
-const Cart = () => {
+const Cart =async () => {
+ 
   return (
     <div>Cart</div>
   )

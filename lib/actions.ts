@@ -1,6 +1,6 @@
 'use server'
 import { revalidatePath } from 'next/cache'
-import ProductModel from './product-model'
+import ProductModel,{ CartModel} from './product-model'
 import dbConnect from './db-connect'
 import { z } from 'zod'
 import { redirect } from 'next/navigation'
@@ -43,6 +43,35 @@ export async function create(formData: FormData) {
     redirect('/')
   }
 }
+export async function addToCart(formData: FormData) {
+    const schema = z.object({
+      _id: z.string().min(1),
+     
+    })
+    const data = schema.parse({
+      _id: formData.get('_id'),
+      
+    })
+    try {
+          await dbConnect()
+          let productId = await ProductModel.findById({ _id:data._id })
+          
+          const cartProduct={
+            title: productId.title,
+            img: productId.img,
+            price: productId.price,
+            quantity: '1',
+            pay:'100'
+          }
+          const data = new CartModel(cartProduct)
+          console.log(data)
+          await data.save()
+       revalidatePath('/')
+          return { message: `Deleted product ${data._id}` }
+        } catch (e) {
+          return { message: 'Failed to delete product' }
+        }
+  }
 
 // export async function deleteProduct(formData: FormData) {
 //   const schema = z.object({

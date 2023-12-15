@@ -1,3 +1,5 @@
+
+import AddCart from '@/components/addcart'
 import dbConnect from '@/lib/db-connect'
 import ProductModel, { Product } from '@/lib/product-model'
 import Image from 'next/image'
@@ -7,6 +9,10 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
   await dbConnect()
   const { id } = params;  
   const newestElement=await ProductModel.findById(id)
+
+  
+
+
   return (
     <div className='grid grid-cols-2 px-24 py-12 place-items-center'>
       <div className='grid grid-cols-2 place-items-center'>
@@ -52,7 +58,9 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
       <p className='line-through ml-4 text-red-400'>{newestElement?.altprice} $</p>
       </div>
       <p>{newestElement?.description} </p>
-      <Link className='bg-violet-700 w-fit px-6 py-2 text-white rounded-sm hover:bg-violet-500 transition-all shadow-lg' href={'/cart'}>Add To Cart</Link>
+     
+        <AddCart id={id}/>
+      
       </div>
       
       

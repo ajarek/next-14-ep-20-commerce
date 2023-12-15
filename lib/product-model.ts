@@ -29,3 +29,29 @@ const productSchema = new mongoose.Schema(
 const ProductModel =
   mongoose.models.Product || mongoose.model('Product', productSchema)
 export default ProductModel
+
+
+export type Cart = {
+  _id: string
+  title: string
+  img: string
+  price: string
+  quantity: string
+  pay:string
+}
+
+const cartSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true, unique: true },
+    img: { type: String, required: true },
+    price: { type: String, required: true },
+    quantity: { type: String, required: true },
+    pay: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  }
+)
+
+export const CartModel =
+  mongoose.models.Cart || mongoose.model('Cart', cartSchema)
