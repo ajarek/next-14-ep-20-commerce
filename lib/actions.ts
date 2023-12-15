@@ -55,19 +55,19 @@ export async function addToCart(formData: FormData) {
     try {
           await dbConnect()
           let productId = await ProductModel.findById({ _id:data._id })
-          
+          const payAll=productId.price*1
           const cartProduct={
             title: productId.title,
             img: productId.img,
             price: productId.price,
             quantity: '1',
-            pay:'100'
+            pay:payAll
           }
-          const data = new CartModel(cartProduct)
-          console.log(data)
-          await data.save()
+          const dataCart = new CartModel(cartProduct)
+          console.log(dataCart)
+          await dataCart.save()
        revalidatePath('/')
-          return { message: `Deleted product ${data._id}` }
+          return { message: `Deleted product ${dataCart._id}` }
         } catch (e) {
           return { message: 'Failed to delete product' }
         }
