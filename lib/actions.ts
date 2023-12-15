@@ -13,6 +13,7 @@ export async function create(formData: FormData) {
     img2: z.string(),
     price: z.string(),
     altprice: z.string(),
+    category:z.string(),
     description:z.string(),
   })
 
@@ -23,6 +24,7 @@ export async function create(formData: FormData) {
     img2: formData.get('img2'),
     price: formData.get('price'),
     altprice: formData.get('altprice'),
+    category: formData.get('category'),
     description: formData.get('description'),
   })
   console.log(productData);

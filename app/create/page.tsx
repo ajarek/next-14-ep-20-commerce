@@ -57,6 +57,13 @@ const Page = () => {
         required
         placeholder='520.25'
       />
+      <Label htmlFor='category'>Category</Label>
+      <Input
+        type='text'
+        name='category'
+        required
+        placeholder='men'
+      />
       <Label htmlFor='description'>Description</Label>
       <Textarea
        

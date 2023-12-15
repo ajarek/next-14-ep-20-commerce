@@ -25,7 +25,7 @@ const Newest = async () => {
             />
             <p>{el.title}</p>
             <p className='font-bold'>{el.price} $</p>
-            <p>Men/Women/Teens</p>
+            <p>{el.category}</p>
             </Link>
           </div>
         )

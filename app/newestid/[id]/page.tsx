@@ -51,8 +51,9 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
         </div>
       </div>
       <div className='flex flex-col justify-center px-8 gap-4'>
-     
+      
       <p className=' text-xl'>{newestElement?.title} </p>
+      <p className=' text-lg capitalize'>category: {newestElement?.category} </p>
       <div className='flex items-center'>
       <p className='font-bold text-xl'>{newestElement?.price} $</p>
       <p className='line-through ml-4 text-red-400'>{newestElement?.altprice} $</p>

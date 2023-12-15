@@ -8,6 +8,7 @@ export type Product = {
   img2: string
   price: string
   altprice: string
+  category:string
   description:string
 }
 
@@ -19,6 +20,7 @@ const productSchema = new mongoose.Schema(
     img2: { type: String, required: true },
     price: { type: String, required: true },
     altprice: { type: String, required: true },
+    category: { type: String, required: true }, 
     description: { type: String, required: true },
   },
   {
