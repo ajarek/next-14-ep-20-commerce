@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { ModeToggle } from './ui/toggle-mode'
+import { ModeToggle, Product } from './ui/toggle-mode'
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
+import { lengthCart } from '@/lib/length'
 
 const links = [
   {
@@ -66,17 +67,18 @@ const Navbar = () => {
                 <Link href={item.url}>{item.title}</Link>
               </li>
             ))}
-            
           </ul>
-          
-
         </div>
         <div>
-          <Link href='/cart' className='mr-4 text-2xl'>🛒<sup>0</sup></Link>
+          <Link
+            href='/cart'
+            className='mr-4 text-2xl'
+          >
+            🛒<sup>{lengthCart()}</sup>
+          </Link>
           <ModeToggle />
         </div>
       </div>
-     
     </nav>
   )
 }

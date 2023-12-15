@@ -27,7 +27,7 @@ const productSchema = new mongoose.Schema(
 )
 
 const ProductModel =
-  mongoose.models.Product || mongoose.model('Product', productSchema)
+  mongoose.models?.Product || mongoose.model('Product', productSchema)
 export default ProductModel
 
 
@@ -54,4 +54,4 @@ const cartSchema = new mongoose.Schema(
 )
 
 export const CartModel =
-  mongoose.models.Cart || mongoose.model('Cart', cartSchema)
+  mongoose.models?.Cart || mongoose.model('Cart', cartSchema)
