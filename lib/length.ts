@@ -3,6 +3,6 @@ import dbConnect from '../lib/db-connect'
 
 export async function lengthCart(){
   await dbConnect()
-  const shopping = (await CartModel.find({}))
-  return shopping.length>0?shopping.length:0
+  const shopping = [...(await CartModel.find({}))]
+  return shopping.reduce((acc,item)=>acc+Number(item.quantity),0)
 }

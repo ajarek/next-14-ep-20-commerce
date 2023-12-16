@@ -1,24 +1,30 @@
-'use client'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { selectQuantity } from '@/lib/actions'
 
-type Nr={
-  nr:number
+type AppProps = {
+  id: string
 }
 
-
-const FormQuantity = ({nr}:Nr) => {
- const [counter,setCounter]=useState<number>(nr)
- console.log(counter);
- 
+const FormQuantity = ({ id }: AppProps) => {
   return (
     <div className='flex items-center '>
-      <Button onClick={()=>setCounter(counter+1)} className='bg-violet-400'>➕</Button>
-      <div className='w-8 h-8 text-xl text-center'>{counter}</div>
-      <Button onClick={()=>setCounter(counter-1)} className='bg-violet-400'>➖</Button>
+      <form action={selectQuantity}>
+        <input
+          type='hidden'
+          name='_id'
+          value={id}
+        />
+        <select name='select'>
+          <option value=''>Select quantity</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </select>
+        <Button type='submit'>Ok</Button>
+      </form>
     </div>
-      
-      
   )
 }
 

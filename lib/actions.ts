@@ -76,6 +76,31 @@ export async function addToCart(formData: FormData) {
           return { message: 'Failed to delete product' }
         }
   }
+  
+  export async function selectQuantity(formData: FormData) {
+    const ile={
+      select:formData.get('select'),
+      _id: formData.get('_id'),
+    }
+    
+    try {
+      await dbConnect()
+      let productId = await ProductModel.findById({ _id:ile._id })
+      const update = { quantity: ile.select }
+      const filter= {_id:ile._id}
+      
+      await ProductModel.findOneAndUpdate(filter, update, {
+        new: true
+      });
+     
+      
+ 
+      return { message: `Update product ${productId._id}` }
+    } catch (e) {
+      return { message: 'Failed to delete product' }
+    }
+   }
+
 
 // export async function deleteProduct(formData: FormData) {
 //   const schema = z.object({
