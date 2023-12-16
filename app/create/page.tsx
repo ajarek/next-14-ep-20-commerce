@@ -57,6 +57,13 @@ const Page = () => {
         required
         placeholder='520.25'
       />
+      <Label htmlFor='quantity'>Quantity</Label>
+      <Input
+        type='text'
+        name='quantity'
+        required
+        placeholder='1'
+      />
       <Label htmlFor='category'>Category</Label>
       <Input
         type='text'

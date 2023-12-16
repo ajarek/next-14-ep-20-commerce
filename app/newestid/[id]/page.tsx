@@ -1,4 +1,5 @@
 
+import FormQuantity from '@/components/FormQuantity'
 import AddCart from '@/components/addcart'
 import dbConnect from '@/lib/db-connect'
 import ProductModel, { Product } from '@/lib/product-model'
@@ -11,6 +12,7 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
   const newestElement=await ProductModel.findById(id)
 
   
+
 
 
   return (
@@ -58,6 +60,7 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
       <p className='font-bold text-xl'>{newestElement?.price} $</p>
       <p className='line-through ml-4 text-red-400'>{newestElement?.altprice} $</p>
       </div>
+      <FormQuantity nr={Number(newestElement.quantity)}/>
       <p>{newestElement?.description} </p>
      
         <AddCart id={id}/>

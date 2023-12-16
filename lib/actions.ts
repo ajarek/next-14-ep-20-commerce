@@ -12,6 +12,7 @@ export async function create(formData: FormData) {
     img1: z.string(),
     img2: z.string(),
     price: z.string(),
+    quantity: z.string(),
     altprice: z.string(),
     category:z.string(),
     description:z.string(),
@@ -23,11 +24,12 @@ export async function create(formData: FormData) {
     img1: formData.get('img1'),
     img2: formData.get('img2'),
     price: formData.get('price'),
+    quantity: formData.get('price'),
     altprice: formData.get('altprice'),
     category: formData.get('category'),
     description: formData.get('description'),
   })
-  console.log(productData);
+
   if (!productData) {
     return { message: 'Form data is not valid' }
   }
@@ -57,16 +59,16 @@ export async function addToCart(formData: FormData) {
     try {
           await dbConnect()
           let productId = await ProductModel.findById({ _id:data._id })
-          const payAll=productId.price*1
+          const payAll=productId.price*productId.quantity
           const cartProduct={
             title: productId.title,
             img: productId.img,
             price: productId.price,
-            quantity: '1',
+            quantity: productId.quantity,
             pay:payAll
           }
           const dataCart = new CartModel(cartProduct)
-          console.log(dataCart)
+         
           await dataCart.save()
        revalidatePath('/')
           return { message: `Deleted product ${dataCart._id}` }
