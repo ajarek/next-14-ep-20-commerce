@@ -116,8 +116,8 @@ export async function deleteItem(formData: FormData) {
     await dbConnect()
     await CartModel.findOneAndDelete({ _id: data._id })
     revalidatePath('/')
-    console.log({ message: `Deleted product ${data.title}` })
-    return { message: `Deleted product ${data.title}` }
+    console.log({ message: `Deleted product ${data._id}` })
+    return { message: `Deleted product ${data._id}` }
   } catch (e) {
     return { message: 'Failed to delete product' }
   }
