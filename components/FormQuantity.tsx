@@ -12,17 +12,17 @@ const FormQuantity = ({ id }: AppProps) => {
         <input
           type='hidden'
           name='_id'
-          value={id}
+          value={id.toString()}
         />
-        <select name='select'>
-          <option value=''>Select quantity</option>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
+        <select name='select' className='h-10 outline-none border border-slate-500 text-lg mr-4 rounded-lg'>
+          <option className='text-left' value=''>Select quantity</option>
+          <option className='text-center' value='1'>1</option>
+          <option className='text-center' value='2'>2</option>
+          <option className='text-center' value='3'>3</option>
+          <option className='text-center' value='4'>4</option>
+          <option className='text-center' value='5'>5</option>
         </select>
-        <Button type='submit'>Ok</Button>
+        <Button type='submit' className='bg-violet-500 rounded-sm '>Ok</Button>
       </form>
     </div>
   )

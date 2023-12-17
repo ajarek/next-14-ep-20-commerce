@@ -10,12 +10,12 @@ export default function DeleteItem({  _id,}: {  _id: string}) {
       <input
         type='hidden'
         name='_id'
-        value={_id}
+        value={_id.toString()}
       />
       
       <button
         type='submit'
-        className='max-lg:text-xl text-2xl '
+        className=' text-xl '
       >
         ❌
       </button>

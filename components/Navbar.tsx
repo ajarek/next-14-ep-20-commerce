@@ -36,7 +36,8 @@ const links = [
 
 const Navbar = () => {
   const [state, setState] = useState(false)
-
+  
+  
   return (
     <nav className=' w-full border-b-2   max-md:border-0'>
       <div className=' items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8 '>

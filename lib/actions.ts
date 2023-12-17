@@ -74,6 +74,8 @@ export async function addToCart(formData: FormData) {
           return { message: `Deleted product ${dataCart._id}` }
         } catch (e) {
           return { message: 'Failed to delete product' }
+        }finally {
+          redirect('/')
         }
   }
   

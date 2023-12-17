@@ -61,7 +61,7 @@ const NewestId = async ({ params }: { params: { id: string } }) => {
       <p className='line-through ml-4 text-red-400'>{newestElement?.altprice} $</p>
       </div>
       <FormQuantity id={newestElement._id}/>
-      <p>You have selected Quantity : {newestElement?.quantity}</p>
+      <p>You have selected Quantity : <span className='text-xl font-bold'>{newestElement?.quantity}</span> </p>
       <p>{newestElement?.description} </p>
      
         <AddCart id={id}/>
