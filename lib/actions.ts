@@ -102,26 +102,26 @@ export async function addToCart(formData: FormData) {
    }
 
 
-// export async function deleteProduct(formData: FormData) {
-//   const schema = z.object({
-//     _id: z.string().min(1),
-//     name: z.string().min(1),
-//   })
-//   const data = schema.parse({
-//     _id: formData.get('_id'),
-//     name: formData.get('name'),
-//   })
+export async function deleteItem(formData: FormData) {
+  const schema = z.object({
+    _id: z.string().min(1),
+    
+  })
+  const data = schema.parse({
+    _id: formData.get('_id'),
+    
+  })
 
-//   try {
-//     await dbConnect()
-//     await ProductModel.findOneAndDelete({ _id: data._id })
-//     revalidatePath('/')
-//     console.log({ message: `Deleted product ${data.name}` })
-//     return { message: `Deleted product ${data.name}` }
-//   } catch (e) {
-//     return { message: 'Failed to delete product' }
-//   }
-// }
+  try {
+    await dbConnect()
+    await CartModel.findOneAndDelete({ _id: data._id })
+    revalidatePath('/')
+    console.log({ message: `Deleted product ${data.title}` })
+    return { message: `Deleted product ${data.title}` }
+  } catch (e) {
+    return { message: 'Failed to delete product' }
+  }
+}
 
 // export const updateProduct = async (formData: FormData ) => {
 //   const userSchema = z.object({

@@ -1,6 +1,7 @@
 import { CartModel, Cart } from '../../lib/product-model'
 import dbConnect from '../../lib/db-connect'
 import Image from 'next/image'
+import DeleteItem from '@/components/DeleteItem'
 
 const CartClient = async () => {
   await dbConnect()
@@ -24,7 +25,7 @@ const CartClient = async () => {
         <p className='font-bold '>{el.price} $</p>
         <p>{el.quantity}</p>
         <p>{el.pay}</p>
-        
+        <DeleteItem _id={el._id}/>
       </div>
     )
   })}

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ModeToggle, Product } from './ui/toggle-mode'
+import { ModeToggle } from './ui/toggle-mode'
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
 import { lengthCart } from '@/lib/length'
