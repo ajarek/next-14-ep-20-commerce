@@ -38,7 +38,7 @@ const CartClient = async () => {
             <p className='font-bold '>{el.price} $</p>
             <p>{el.quantity}</p>
             <p>{el.pay}</p>
-            <DeleteItem _id={el._id} />
+            <DeleteItem _id={el._id.toString()} />
           </div>
         )
       })}
