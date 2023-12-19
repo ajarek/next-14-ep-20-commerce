@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from '@/components/ui/textarea'
 import { Metadata } from 'next'
 import { create } from '@/lib/actions'
 
@@ -73,7 +73,6 @@ const Page = () => {
       />
       <Label htmlFor='description'>Description</Label>
       <Textarea
-       
         name='description'
         required
         placeholder='Air Cushioning: The Air Force 1 was the first basketball shoe to feature....'

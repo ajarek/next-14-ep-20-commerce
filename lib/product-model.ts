@@ -7,10 +7,10 @@ export type Product = {
   img1: string
   img2: string
   price: string
-  quantity:string
+  quantity: string
   altprice: string
-  category:string
-  description:string
+  category: string
+  description: string
 }
 
 const productSchema = new mongoose.Schema(
@@ -22,7 +22,7 @@ const productSchema = new mongoose.Schema(
     price: { type: String, required: true },
     quantity: { type: String, required: true },
     altprice: { type: String, required: true },
-    category: { type: String, required: true }, 
+    category: { type: String, required: true },
     description: { type: String, required: true },
   },
   {
@@ -34,14 +34,13 @@ const ProductModel =
   mongoose.models?.Product || mongoose.model('Product', productSchema)
 export default ProductModel
 
-
 export type Cart = {
   _id: string
   title: string
   img: string
   price: string
   quantity: string
-  pay:string
+  pay: string
 }
 
 const cartSchema = new mongoose.Schema(

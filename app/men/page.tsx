@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 const Men = async () => {
   await dbConnect()
-  const products = (await ProductModel.find({category:'men'}).sort({
+  const products = (await ProductModel.find({ category: 'men' }).sort({
     _id: -1,
   })) as Product[]
   return (

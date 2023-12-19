@@ -2,17 +2,15 @@
 
 import { deleteItem } from '@/lib/actions'
 
-export default function DeleteItem({  _id,}: {  _id: string}) {
+export default function DeleteItem({ _id }: { _id: string }) {
   return (
-    <form
-      action={deleteItem}
-    >
+    <form action={deleteItem}>
       <input
         type='hidden'
         name='_id'
         value={_id.toString()}
       />
-      
+
       <button
         type='submit'
         className=' text-xl '

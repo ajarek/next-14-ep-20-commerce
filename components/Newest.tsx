@@ -13,19 +13,20 @@ const Newest = async () => {
     <div className='flex flex-wrap justify-evenly mt-12'>
       {products.map((el) => {
         return (
-        
-          <div key={el._id} className='shadow-lg rounded-lg overflow-hidden'>
+          <div
+            key={el._id}
+            className='shadow-lg rounded-lg overflow-hidden'
+          >
             <Link href={`/newestid/${el._id}`}>
-            <Image
-              src={el.img}
-              alt='foto'
-              width={250}
-              height={308}
-              
-            />
-            <p>{el.title}</p>
-            <p className='font-bold'>{el.price} $</p>
-            <p>{el.category}</p>
+              <Image
+                src={el.img}
+                alt='foto'
+                width={250}
+                height={308}
+              />
+              <p>{el.title}</p>
+              <p className='font-bold'>{el.price} $</p>
+              <p>{el.category}</p>
             </Link>
           </div>
         )
