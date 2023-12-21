@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { ModeToggle } from './ui/toggle-mode'
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
 import { lengthCart } from '@/lib/length'
+import { Button } from './ui/button'
 
 const links = [
   {
@@ -45,12 +45,12 @@ const Navbar = () => {
             <h1 className='text-3xl font-bold text-purple-600'>Commerce</h1>
           </Link>
           <div className='md:hidden'>
-            <button
+            <Button
               className=' outline-none p-2 rounded-md focus:border-gray-400 focus:border'
               onClick={() => setState(!state)}
             >
               <Menu />
-            </button>
+            </Button>
           </div>
         </div>
         <div
@@ -76,7 +76,7 @@ const Navbar = () => {
           >
             🛒<sup>{lengthCart()}</sup>
           </Link>
-          <ModeToggle />
+          
         </div>
       </div>
     </nav>
